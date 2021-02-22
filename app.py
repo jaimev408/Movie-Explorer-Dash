@@ -130,7 +130,7 @@ main_layout = html.Div([
     ], 
     style=CONTENT_STYLE,)
                            
-app.layout = html.Div([dcc.Location(id="url"), sidebar, main_layout])
+app.layout = html.Div([html.H1("HELLO")])
 
 
 @app.callback(
@@ -197,4 +197,4 @@ def render_content(tab, genre, years, rating):
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug = True)
+    app.run_server()
