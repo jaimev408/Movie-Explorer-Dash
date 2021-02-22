@@ -43,7 +43,7 @@ external_stylesheets = [dbc.themes.BOOTSTRAP]
 data, genres, sliderMarks, ratings = dataClean(pd.read_csv("./resources/all_movies.csv"))
 
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(external_stylesheets=external_stylesheets)
 server = app.server
 
 styles = {
@@ -196,5 +196,5 @@ def render_content(tab, genre, years, rating):
 
     return fig
 
-if __name__ == '__main__':
-    app.run_server()
+# if __name__ == '__main__':
+#     app.run_server()
